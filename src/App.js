@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function Food({ name, picture, rating }) {
   return (
@@ -63,5 +64,11 @@ function App() {
     </div>
   );
 }
+
+Food.propTypes = {
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  rating: PropTypes.number.isRequired
+};
 
 export default App;
